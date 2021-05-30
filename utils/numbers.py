@@ -21,3 +21,16 @@ def reverse_number(n):
 
 def int_sqrt(number):
     return int(math.sqrt(number))
+
+
+def factor_number(n):
+    factors = dict()
+    factor = 2
+    while n != 1:
+        if n % factor == 0:
+            factors[factor] = factors.get(factor, 0) + 1
+            n = n / factor
+            factor = 2
+        else:
+            factor += 1
+    return factors
