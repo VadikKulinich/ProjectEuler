@@ -34,3 +34,7 @@ def factor_number(n):
         else:
             factor += 1
     return factors
+
+
+def sum_natural(n):
+    return n * (n + 1) // 2
