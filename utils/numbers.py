@@ -38,3 +38,12 @@ def factor_number(n):
 
 def sum_natural(n):
     return n * (n + 1) // 2
+
+
+def digits_in_number(num):
+    digits_in_part = 0
+    while num > 0:
+        num = num // 10
+        digits_in_part += 1
+
+    return digits_in_part
