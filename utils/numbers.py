@@ -36,6 +36,17 @@ def factor_number(n):
     return factors
 
 
+def sum_proper_divisors(n):
+    factors = factor_number(n)
+    divisors_sum = 1
+    subtracted_sum = 1
+    for num, count in factors.items():
+        divisors_sum *= (pow(num, count + 1) - 1) // (num - 1)
+        subtracted_sum *= int(pow(num, count))
+
+    return divisors_sum - subtracted_sum
+
+
 def sum_natural(n):
     return n * (n + 1) // 2
 
