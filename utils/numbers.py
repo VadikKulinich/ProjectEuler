@@ -58,3 +58,18 @@ def digits_in_number(num):
         digits_in_part += 1
 
     return digits_in_part
+
+
+def fibonacci(n):
+    if n < 1:
+        return -1
+    current = 1
+    previous = 0
+    counter = 1
+    while counter != n:
+        tmp = current
+        current += previous
+        previous = tmp
+        counter += 1
+
+    return current
