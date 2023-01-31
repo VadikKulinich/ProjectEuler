@@ -73,3 +73,12 @@ def fibonacci(n):
         counter += 1
 
     return current
+
+
+def digits_of(n):
+    n_digits = []
+    while n > 0:
+        n_digits.append(n % 10)
+        n = n // 10
+
+    return n_digits
